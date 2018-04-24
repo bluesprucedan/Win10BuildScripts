@@ -1,13 +1,12 @@
 #Creates local admin
-$Username = Read-Host -Prompt “Default Local Admin Account in LastPass”
+$Username = Read-Host -Prompt "Default Local Admin Account in LastPass"
 
 #Changes Password
-$Password = Read-Host -Prompt “Password - Default Local Admin Account in LastPass” 
+$Password = Read-Host -Prompt "Password - Default Local Admin Account in LastPass" 
 
 #Adds to Admin group
 $group = "Administrators"
 
-#This part I don't really understand yet
 $adsi = [ADSI]"WinNT://$env:COMPUTERNAME"
 $existing = $adsi.Children | where {$_.SchemaClassName -eq 'user' -and $_.Name -eq $Username }
 if ($existing -eq $null) {
