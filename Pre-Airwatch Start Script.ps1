@@ -32,16 +32,16 @@ Write-Host "Power Configuration"
 Write-Host "Rename computer"
 .\systemrename.ps1
 
-Write-Host "Applying Windows Updates"
-.\potentialupdatescript.ps1
-
 Write-Host "Install AirWatchAgent"
 .\airwatchdownload.ps1
 
-Write-Host "Disable UAC and reboot"
+Write-Host "Disable UAC"
 .\uac-disable.ps1
 
-Write-Host
+Write-Host "Applying Windows Updates"
+.\potentialupdatescript.ps1
+
+
 Write-Host
 Write-Host
 Write-Host "System is ready for Airwatch Deployment"
