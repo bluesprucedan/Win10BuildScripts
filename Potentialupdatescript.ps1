@@ -1,3 +1,3 @@
 Install-Module PSWindowsUpdate
 Get-Command -Module PSWindowsUpdate
-Install-WindowsUpdate -Install -AcceptAll -MicrosoftUpdate
+Install-WindowsUpdate -Install -AcceptAll -MicrosoftUpdate -Autoreboot
